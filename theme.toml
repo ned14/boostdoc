@@ -2,20 +2,14 @@
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
 name = "Boostdoc"
-license = "MIT"
+license = "Boost"
 licenselink = "https://github.com/ned14/boostdoc/blob/master/LICENSE"
 description = "A Hugo theme generating a Boost C++ Libraries documentation"
 homepage = "http://example.com/"
 tags = []
-features = []
-min_version = "0.24"
+features = ["documentation"]
+min_version = "0.32"
 
 [author]
   name = "Niall Douglas"
   homepage = "https://github.com/ned14/boostdoc"
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
