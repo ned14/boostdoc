@@ -1,0 +1,10 @@
+<div class="spirit-nav">
+  {{if .PrevPage}}
+  <a accesskey="p" href="{{.PrevPage}}"><img src="{{"images/prev.png" | relURL}}" alt="Prev"></a>
+  {{end}}
+  <a accesskey="u" href="{{".." | relURL}}"><img src="{{"images/up.png" | relURL}}" alt="Up"></a>
+  <a accesskey="h" href="{{"/" | relURL}}"><img src="{{"images/home.png" | relURL}}" alt="Home"></a>
+  {{if .NextPage}}
+  <a accesskey="n" href="{{.NextPage}}"><img src="{{"images/next.png" | relURL}}" alt="Next"></a>
+  {{end}}
+</div>
