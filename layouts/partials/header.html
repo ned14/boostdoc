@@ -1,5 +1,10 @@
-<div id="boost-common-heading-doc" style="background: #574D74 url({{"images/header-bg.png" | relURL}}) repeat-x top left;">
-  <div class="heading-inner" style="background: url({{"images/header-fg.png" | relURL}}) no-repeat top left;">
+{{- /* relativeURLs don't work inside CSS style declarations :(, see https://github.com/gohugoio/hugo/issues/2744 */ -}}
+<!-- <div>{{.RelPermalink}}</div> -->
+{{- $dirdepth := (split (trim .RelPermalink "/") "/") | len -}}
+{{- $relbasedir := cond (eq $dirdepth 1) "" ("../" | strings.Repeat (sub $dirdepth 1)) -}}
+{{- .Page.Scratch.Set "relbasedir" $relbasedir -}}
+<div id="boost-common-heading-doc" style="background: #574D74 url('{{ $relbasedir }}images/header-bg.png') repeat-x top left;">
+  <div class="heading-inner" style="background: url('{{ $relbasedir }}images/header-fg.png') no-repeat top left;">
   <div class="heading-placard"></div>
 
   <h1 class="heading-title">
