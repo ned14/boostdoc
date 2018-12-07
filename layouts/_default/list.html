@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{if .Content}}
-  <div class="titlepage"><div><div><h2 class="title" style="clear: both">{{.Title}}</h2></div></div></div>
+  <div class="titlepage"><div><div><h1 style="clear: both">{{.Title}}</h1></div></div></div>
   {{- if and (gt .WordCount 400) .TableOfContents }}
   <div class="toc">
     {{- $toc := replace .TableOfContents `<nav id="TableOfContents">
