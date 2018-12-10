@@ -17,7 +17,7 @@
 {{- define "section-tree-nav" }}
 {{- $currentNode := .currentnode }}
  {{- with .sect}}
-  <dt><span class="section"><a href="{{ .RelPermalink}}">{{.Title}}</a></span></dt>
+  <dt><span class="section"><a href="{{ .RelPermalink}}">{{.Title | markdownify}}</a></span></dt>
   {{- if and .IsSection (or (not .Params.hidden) $.showhidden)}}
     {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
       {{- if ne $numberOfPages 0 }}
